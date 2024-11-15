@@ -21,6 +21,7 @@ export type CosmosConfig = {
   exposeImports: boolean | string;
   fixtureFileSuffix: string;
   fixturesDir: string;
+  fixturesLocation: string;
   globalImports: string[];
   // From Node.js docs: If host is omitted, the server will accept connections
   // https://github.com/react-cosmos/react-cosmos/issues/639

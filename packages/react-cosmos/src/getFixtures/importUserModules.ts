@@ -15,12 +15,14 @@ type UserModules = {
 export async function importUserModules({
   rootDir,
   fixturesDir,
+  fixturesLocation,
   fixtureFileSuffix,
   ignore,
 }: CosmosConfig): Promise<UserModules> {
   const { fixturePaths, decoratorPaths } = await findUserModulePaths({
     rootDir,
     fixturesDir,
+    fixturesLocation,
     fixtureFileSuffix,
     ignore,
   });

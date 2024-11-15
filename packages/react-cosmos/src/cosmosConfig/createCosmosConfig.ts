@@ -20,6 +20,7 @@ export function createCosmosConfig(
     exportPath: getExportPath(cosmosConfigInput, rootDir),
     fixtureFileSuffix: getFixtureFileSuffix(cosmosConfigInput),
     fixturesDir: getFixturesDir(cosmosConfigInput),
+    fixturesLocation: cosmosConfigInput.fixturesLocation ?? rootDir,
     globalImports: getGlobalImports(cosmosConfigInput, rootDir),
     hostname: getHostname(cosmosConfigInput),
     https: getHttps(cosmosConfigInput),

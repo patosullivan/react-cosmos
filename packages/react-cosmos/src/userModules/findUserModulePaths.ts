@@ -9,17 +9,19 @@ import {
 type FindUserModulePathsArgs = {
   rootDir: string;
   fixturesDir: string;
+  fixturesLocation?: string;
   fixtureFileSuffix: string;
   ignore: string[];
 };
 export async function findUserModulePaths({
   rootDir,
   fixturesDir,
+  fixturesLocation,
   fixtureFileSuffix,
   ignore,
 }: FindUserModulePathsArgs): Promise<UserModulePaths> {
   const paths = await glob('**/*', {
-    cwd: rootDir,
+    cwd: fixturesLocation ? fixturesLocation : rootDir,
     absolute: true,
     ignore,
   });
