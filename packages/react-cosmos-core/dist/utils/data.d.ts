@@ -1,0 +1,11 @@
+export type PrimitiveData = string | number | boolean | null | undefined;
+export type ObjectData = Record<string, unknown>;
+export type ArrayData = unknown[];
+export declare function isString(value: unknown): value is string;
+export declare function isNumber(value: unknown): value is number;
+export declare function isBoolean(value: unknown): value is boolean;
+export declare function isNull(value: unknown): value is null;
+export declare function isUndefined(value: unknown): value is undefined;
+export declare function isPrimitiveData(data: unknown): data is PrimitiveData;
+export declare function isObject(data: unknown): data is ObjectData;
+export declare function isArray(data: unknown): data is ArrayData;
